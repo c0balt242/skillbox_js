@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>2</title>
+</head>
+<script>
+
+var startYear, finishYear;
+
+startYear = prompt('Введите начальный год: ');
+finishYear = prompt('Введите конечный год: ');
+
+if (startYear <= finishYear) {
+  console.log('Список високосных годов от ' + startYear + ' до ' + finishYear + ':');
+  for (startYear; startYear <= finishYear; startYear++) {
+    if ((startYear % 4) == 0 && (startYear % 100) != 0 || (startYear % 400) == 0) {
+      console.log(startYear);
+    }
+  }
+} else {
+  alert('Начальный год не может быть больше конечного');
+}
+
+</script>
+<body>
+  
+</body>
+</html>

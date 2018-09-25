@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>3</title>
+</head>
+<script>
+
+var inputNum, a = 0;
+do {
+  inputNum = prompt('Введите число: ');
+  if (isNaN((a + +inputNum))) {
+    console.log('Fail, \"' + inputNum + '\" is not number');
+    inputNum = 0;
+  }
+  a = a + +inputNum;
+} while (inputNum != null);
+alert('Summ: ' + a);
+
+
+</script>
+<body>
+  
+</body>
+</html>
