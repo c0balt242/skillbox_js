@@ -9,8 +9,7 @@
 var inputNum, a = 0;
 do {
   inputNum = prompt('Введите число: ');
-  if (isNaN(inputNum + 1)) {
-    // console.log('Fail, \"' + inputNum + '\" is not number');
+  if (isNaN(inputNum)) {
     inputNum = 0;
   }
     a = a + +inputNum;

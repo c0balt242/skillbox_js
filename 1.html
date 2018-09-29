@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>2</title>
+  <title>1</title>
 </head>
 <script>
 
@@ -11,14 +11,19 @@ var a, b;
 a = prompt('Введите первое число');
 b = prompt('Введите второе число');
 
-if (a == b) {
-  alert('Числа равны');
-} else if (a > b) {
-  alert('Первое число больше второго');  
-} else  {
-  alert('Второе число больше первого');  
-}
+if (isNaN(a) || isNaN(b) != true) {
 
+  if (a == b) {
+   alert('Числа равны');
+  } else if (a > b) {
+    alert('Первое число больше второго');  
+  } else  {
+   alert('Второе число больше первого');  
+  }
+
+} else {
+  alert('Вы ввели не число');
+}
 </script>
 <body>
   
