@@ -9,7 +9,8 @@
 var inputNum, a = 0;
 do {
   inputNum = prompt('Введите число: ');
-  if (isNaN(inputNum)) {
+  if (parseInt(inputNum) == NaN || isNaN(inputNum)) {
+    alert('Некорректное значение!');
     inputNum = 0;
   }
     a = a + +inputNum;
