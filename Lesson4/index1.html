@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<script>
+"use strict";
+
+// var month = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
+// var a = month[d.getMonth()];
+// console.log('Сегодня ' + d.getDay() + ' ' + a);
+
+var secs = ['секунд', 'секунды', 'секунда'];
+var mins = ['минут', 'минуты', 'минута'];
+var hours = [''];
+
+var d = new Date();
+
+var m = d.getMinutes();
+var minutes = check(m, 'm');
+
+var s = d.getSeconds();
+var seconds = check(s, 's');
+
+var h = d.getHours();
+
+var param;
+
+function check(a, param) {
+  if (a % 10 >= 5 && a % 10 <= 9 || a % 10 == 0) {
+    if (param == 'm') {
+      return mins[0];
+    } else if (param == 's') {
+      return secs[0];
+    }
+  } else if (a % 10 >= 2 && a % 10 <= 4) {
+    if (param == 'm') {
+      return mins[1];
+    } else if (param == 's') {
+      return secs[1];
+    }
+  } else {
+    if (param == 'm') {
+      return mins[2];
+    } else if (param == 's') {
+      return secs[2];
+    }
+  }
+}
+
+console.log(h + ' часов ' + m + ' ' + minutes + ' ' + s + ' ' + seconds);
+
+</script>
+<body>
+
+0 5 6 7 8 9 10 - секунд
+
+1 - секунда
+
+2 3 4 - секунды
+
+0 5 6 7 8 9 10 - минут
+
+1 - минута
+
+2 3 4 - минуты
+
+0 5 6 7 8 9 10 11 12 часов
+
+1 час
+
+2 3 4 часа
+
+</body>
+</html>

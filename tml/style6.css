@@ -14,7 +14,7 @@ body {
 }
 
 .overflow {
-  overflow-y: hidden;
+  overflow-y: auto;
 }
 
 .right-float {
@@ -113,6 +113,10 @@ main {
   background: white;
   border: 1px solid black;
   float: right;
+}
+
+.ad-block {
+  padding-bottom: 20px;
 }
 
 .bot-block {
