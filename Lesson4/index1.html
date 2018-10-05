@@ -7,15 +7,15 @@
 <script>
 "use strict";
 
-// var month = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
-// var a = month[d.getMonth()];
-// console.log('Сегодня ' + d.getDay() + ' ' + a);
+var d = new Date();
+
+var month = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
+var a = month[d.getMonth()];
+console.log('Сегодня ' + d.getDay() + ' ' + a);
 
 var secs = ['секунд', 'секунды', 'секунда'];
 var mins = ['минут', 'минуты', 'минута'];
 var hours = [''];
-
-var d = new Date();
 
 var m = d.getMinutes();
 var minutes = check(m, 'm');
