@@ -8,9 +8,8 @@
 <script>
   "use strict";
 
-  var gD = {};
-
-  gD.getH = function () {
+  var textDate = {};
+  textDate.getH = function () {
     var date = new Date();
     var h = date.getHours();
     var hours = ['часов', 'часа', 'час'];
@@ -23,8 +22,7 @@
     }
     return h + ' ' + hr;
   };
-
-  gD.getM = function () {
+  textDate.getM = function () {
     var date = new Date();
     var m = date.getMinutes();
     var mins = ['минут', 'минуты', 'минута'];
@@ -37,8 +35,7 @@
     }
     return m + ' ' + mn;
   };
-
-  gD.getS = function () {
+  textDate.getS = function () {
     var date = new Date();
     var s = date.getSeconds();
     var secs = ['секунд', 'секунды', 'секунда'];
@@ -51,7 +48,7 @@
     }
     return s + ' ' + sc;
   };
-  gD.getMon = function () {
+  textDate.getMon = function () {
     var date = new Date();
     var mon = date.getMonth();
     var month = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября',
@@ -59,44 +56,44 @@
     ];
     return month[mon];
   };
-
-  gD.getDay = function () {
+  textDate.getDay = function () {
     var date = new Date();
     var day = date.getDate();
     return day;
   };
-
-  gD.GetDoW = function () {
+  textDate.GetDoW = function () {
     var date = new Date();
     var day = date.getDay();
     var days = ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'];
-    return days[day];;
+    return days[day];
   }
-
-  gD.getYear = function () {
+  textDate.getYear = function () {
     var date = new Date();
     var year = date.getFullYear();
     return year + ' года';
   };
-
   function output() {
-    //console.log('Точное время: ' + gD.getDay() + ' ' + gD.getMon() + ' ' + gD.getYear() + ' ' + gD.getH() + ' ' + gD.getM() + ' ' + gD.getS());
-    // document.getElementById('time').innerHTML = ('Сегодня' + gD.getDay() + ' ' + gD.getMon() + ' ' +
-    //   gD.getYear() + ' ' + gD.getH() + ' ' + gD.getM() + ' ' + gD.getS());
-    document.getElementById('time').innerHTML = ('Сегодня ' + gD.getDay() + ' ' + gD.getMon() + ' ' + gD.getYear() +
-      ', ' + gD.GetDoW() + ', ' + gD.getH() + ' ' + gD.getM() + ' ' + gD.getS() + '.');
+    //console.log('Точное время: ' + textDate.getDay() + ' ' + textDate.getMon() + ' ' + textDate.getYear() + ' ' + textDate.getH() + ' ' + textDate.getM() + ' ' + textDate.getS());
+    // document.getElementById('time').innerHTML = ('Сегодня' + textDate.getDay() + ' ' + textDate.getMon() + ' ' +
+    //   textDate.getYear() + ' ' + textDate.getH() + ' ' + textDate.getM() + ' ' + textDate.getS());
+    document.getElementById('time').innerHTML = ('Сегодня ' + textDate.getDay() + ' ' + textDate.getMon() + ' ' + textDate.getYear() +
+      ', ' + textDate.GetDoW() + ', ' + textDate.getH() + ' ' + textDate.getM() + ' ' + textDate.getS() + '.');
   }
   var timer = setInterval(output, 1000);
 </script>
 <style>
+  body {
+    background-color: #9ad3de;
+  }
+
   #time {
     font-size: 26px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f1f1f1;
+    background-color: #89bdd3;
     padding: 10px;
     text-align: center;
     margin-top: 200px;
-    color: black;
+    color: #e3e3e3;
   }
 
   .container {
