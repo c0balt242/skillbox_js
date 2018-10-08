@@ -8,7 +8,7 @@
 "use strict";
 
 var input;
-var random = Math.round(Math.random() * 10);
+var random = Math.round(Math.random() * 1000);
 
 function checkNum(input) {
   if (!input || isNaN(input)) {
@@ -20,10 +20,10 @@ function checkNum(input) {
 
 function compareNum(input, random) {
   if (input < random) {
-    alert('Это число меньше чем ' + random);
+    alert('Это число меньше');
     return false;
   } else if (input > random) {
-    alert('Это число больше чем ' + random);
+    alert('Это число больше.');
     return false;
   } else {
     alert('Вы угадали, это число: ' + random);
@@ -32,7 +32,7 @@ function compareNum(input, random) {
 }
 
 do {
-  input = prompt('Введите число(' + random +'): ');
+  input = prompt('Введите число: ');
   if (!checkNum(input)) {
     alert('Это не число');
   } else if (compareNum(input, random)) {

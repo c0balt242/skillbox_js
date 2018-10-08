@@ -3,14 +3,14 @@
 
 <head>
   <meta charset="UTF-8">
-  <title></title>
+  <title>Часы</title>
 </head>
 <script>
   "use strict";
 
-  var getDate = {};
+  var gD = {};
 
-  getDate.getH = function () {
+  gD.getH = function () {
     var date = new Date();
     var h = date.getHours();
     var hours = ['часов', 'часа', 'час'];
@@ -24,7 +24,7 @@
     return h + ' ' + hr;
   };
 
-  getDate.getM = function () {
+  gD.getM = function () {
     var date = new Date();
     var m = date.getMinutes();
     var mins = ['минут', 'минуты', 'минута'];
@@ -38,7 +38,7 @@
     return m + ' ' + mn;
   };
 
-  getDate.getS = function () {
+  gD.getS = function () {
     var date = new Date();
     var s = date.getSeconds();
     var secs = ['секунд', 'секунды', 'секунда'];
@@ -51,7 +51,7 @@
     }
     return s + ' ' + sc;
   };
-  getDate.getMon = function () {
+  gD.getMon = function () {
     var date = new Date();
     var mon = date.getMonth();
     var month = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября',
@@ -60,31 +60,33 @@
     return month[mon];
   };
 
-  getDate.getDay = function () {
+  gD.getDay = function () {
     var date = new Date();
-    var day = date.getDay();
+    var day = date.getDate();
     return day;
   };
 
-  getDate.getYear = function () {
+  gD.GetDoW = function () {
+    var date = new Date();
+    var day = date.getDay();
+    var days = ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'];
+    return days[day];;
+  }
+
+  gD.getYear = function () {
     var date = new Date();
     var year = date.getFullYear();
     return year + ' года';
   };
 
-  function cons() {
-    //console.log('Точное время: ' + getDate.getDay() + ' ' + getDate.getMon() + ' ' + getDate.getYear() + ' ' + getDate.getH() + ' ' + getDate.getM() + ' ' + getDate.getS());
-    document.getElementById('time').innerHTML = ('Точное время: ' + getDate.getDay() + ' ' + getDate.getMon() + ' ' +
-      getDate.getYear() + ' ' + getDate.getH() + ' ' + getDate.getM() + ' ' + getDate.getS());
-    var date = new Date();
-    var s = date.getSeconds();
-    if (s % 2 == 0) {
-      document.getElementById('time').style.color = '#cc461c';
-    } else {
-      document.getElementById('time').style.color = 'black';
-    }
+  function output() {
+    //console.log('Точное время: ' + gD.getDay() + ' ' + gD.getMon() + ' ' + gD.getYear() + ' ' + gD.getH() + ' ' + gD.getM() + ' ' + gD.getS());
+    // document.getElementById('time').innerHTML = ('Сегодня' + gD.getDay() + ' ' + gD.getMon() + ' ' +
+    //   gD.getYear() + ' ' + gD.getH() + ' ' + gD.getM() + ' ' + gD.getS());
+    document.getElementById('time').innerHTML = ('Сегодня ' + gD.getDay() + ' ' + gD.getMon() + ' ' + gD.getYear() +
+      ', ' + gD.GetDoW() + ', ' + gD.getH() + ' ' + gD.getM() + ' ' + gD.getS() + '.');
   }
-  var timer = setInterval(cons, 1000);
+  var timer = setInterval(output, 1000);
 </script>
 <style>
   #time {
@@ -94,6 +96,7 @@
     padding: 10px;
     text-align: center;
     margin-top: 200px;
+    color: black;
   }
 
   .container {

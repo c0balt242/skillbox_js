@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<script>
+  "use strict";
+
+  var users = [
+    {
+    username: 'Test user',
+    login: 'test',
+    password: '123'
+    }, 
+    {
+    username: 'Admin',
+    login: 'admin',
+    password: '111'
+    }, 
+    {
+    username: 'Guest user',
+    login: 'guest',
+    password: 'qwerty'
+    } 
+  ];
+
+  var loginIn = prompt('enter username: ');
+  var passIn = prompt('enter password: ');
+
+  function check (loginIn, passIn) {
+    for (var i = 0; i < users.length; i++) {
+      if (users[i].login == loginIn && users[i].password == passIn) {
+        return users[i].username;
+      }
+    }
+  }
+
+  if (check(loginIn, passIn)) {
+    alert('welcome home ' + check(loginIn, passIn));
+  }
+</script>
+
+<body>
+
+
+</body>
+
+</html>
