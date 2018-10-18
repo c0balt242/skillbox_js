@@ -3,42 +3,43 @@
 
 <head>
   <meta charset="UTF-8">
-  <title></title>
+  <title>Авторизация</title>
 </head>
 <script>
   "use strict";
 
-  var users = [
+  var users = [{
+      username: 'Test user',
+      login: 'test',
+      password: '123'
+    },
     {
-    username: 'Test user',
-    login: 'test',
-    password: '123'
-    }, 
+      username: 'Admin',
+      login: 'admin',
+      password: '111'
+    },
     {
-    username: 'Admin',
-    login: 'admin',
-    password: '111'
-    }, 
-    {
-    username: 'Guest user',
-    login: 'guest',
-    password: 'qwerty'
-    } 
+      username: 'Guest user',
+      login: 'guest',
+      password: 'qwerty'
+    }
   ];
 
-  var loginIn = prompt('enter username: ');
-  var passIn = prompt('enter password: ');
+  var flag = false;
 
-  function check (loginIn, passIn) {
+  while (flag == false) {
+    var log = prompt('Enter username: ');
+    var pass = prompt('Enter password: ');
     for (var i = 0; i < users.length; i++) {
-      if (users[i].login == loginIn && users[i].password == passIn) {
-        return users[i].username;
+      if (users[i].login == log && users[i].password == pass) {
+        alert('Welcome, ' + users[i].username);
+        flag = true;
+        break;
+      }
+      if (i == (users.length - 1)) {
+        alert('Autorization error, try again.');
       }
     }
-  }
-
-  if (check(loginIn, passIn)) {
-    alert('welcome home ' + check(loginIn, passIn));
   }
 </script>
 

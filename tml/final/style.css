@@ -13,28 +13,29 @@ body {
   position: relative;
 }
 
-#top-bar {
+.top-bar {
   background-color: #00122f;
   color: white;
   padding: 20px 0;
   font-size: 16px;
 }
 
-#top-bar a {
+.top-bar a {
+  text-decoration: none;
   color: white;
 }
 
-#datetime {
+.datetime {
   float: right;
 }
 
-#header {
+.header {
   height: 100px;
   background-color: white;
   /* border: 1px solid black; */
 }
 
-#header-bottom {
+.header-bottom {
   height: 80px;
   display: table-cell;
   vertical-align: middle;
@@ -42,35 +43,35 @@ body {
   /* border: 1px solid black; */
 }
 
-#logo {
+.logo {
   margin-top: 25px;
   float: left;
 }
 
-#city {
+.city {
   float: left;
   margin-top: 25px;
   margin-left: 50px;
   color: #448ccb;
 }
 
-#city-text {
+.city-text {
   display: inline-block;
 }
 
-#city-text p {
+.city-text p {
   border-bottom: 2px dotted;
 }
 
-#city-arrow {
+.city-arrow {
   display: inline-block;
 }
 
-#search {
+.search {
   float: right;
 }
 
-#weather {
+.weather {
   float: right;
   margin-right: 40px;
 }
@@ -159,7 +160,7 @@ a:visited {
   top: 0;
   left: 180px;
   padding-left: 15px;
-  background-image: url('img/icon-comments.png');
+  background-image: url('img/icon-comments2.png');
   background-repeat: no-repeat;
 }
 
@@ -218,7 +219,7 @@ a:visited {
 }
 
 .center-mid p {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
 }
 
@@ -259,7 +260,7 @@ a:visited {
   top: 0;
   left: 160px;
   padding-left: 15px;
-  background-image: url(img/icon-comments.png);
+  background-image: url(img/icon-comments2.png);
   background-repeat: no-repeat;
 }
 

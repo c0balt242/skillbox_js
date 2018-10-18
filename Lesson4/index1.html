@@ -72,28 +72,26 @@
     var year = date.getFullYear();
     return year + ' года';
   };
+
   function output() {
-    //console.log('Точное время: ' + textDate.getDay() + ' ' + textDate.getMon() + ' ' + textDate.getYear() + ' ' + textDate.getH() + ' ' + textDate.getM() + ' ' + textDate.getS());
-    // document.getElementById('time').innerHTML = ('Сегодня' + textDate.getDay() + ' ' + textDate.getMon() + ' ' +
-    //   textDate.getYear() + ' ' + textDate.getH() + ' ' + textDate.getM() + ' ' + textDate.getS());
-    document.getElementById('time').innerHTML = ('Сегодня ' + textDate.getDay() + ' ' + textDate.getMon() + ' ' + textDate.getYear() +
-      ', ' + textDate.GetDoW() + ', ' + textDate.getH() + ' ' + textDate.getM() + ' ' + textDate.getS() + '.');
+    console.log('Сегодня ' + textDate.getDay() + ' ' + textDate.getMon() + ' ' + textDate.getYear() + ', ' + textDate.GetDoW() + ', ' + textDate.getH() + ' ' + textDate.getM() + ' ' + textDate.getS() + '.');
+    document.getElementById('time').innerHTML=('Сегодня ' + textDate.getDay() + ' ' + textDate.getMon() + ' ' + textDate.getYear() + ', ' + textDate.GetDoW() + ', ' + textDate.getH() + ' ' + textDate.getM() + ' ' + textDate.getS() + '.');
   }
   var timer = setInterval(output, 1000);
 </script>
 <style>
   body {
-    background-color: #9ad3de;
+    background-color: #4177f1;
   }
 
   #time {
     font-size: 26px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #89bdd3;
+    background-color: #a239ca;
     padding: 10px;
     text-align: center;
     margin-top: 200px;
-    color: #e3e3e3;
+    color: #0e0b16;
   }
 
   .container {
@@ -104,10 +102,8 @@
 </style>
 
 <body>
-
   <div id="time" class="container">
   </div>
-
 </body>
 
 </html>
