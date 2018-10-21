@@ -282,6 +282,41 @@ a:visited {
   margin-bottom: 20px;
 }
 
+.row-column {
+  height: 410px;
+  margin-bottom: 20px;
+}
+
+.row-column-left {
+   background-image: url(img/car.jpg);
+   background-size: cover;
+   width: 60%;
+   float: left;
+   height: 410px;
+}
+
+.row-column-left-footer {
+   padding-left: 20px;
+   padding-right: 10px;
+   color: white;
+}
+
+.row-column-left-footer p {
+  padding-top: 100px;
+}
+
+.row-column-left-footer small {
+  font-size: 14px;
+  padding-bottom: 50px;
+  opacity: 0.7;
+}
+
+
+.row-column-right {
+   padding-left: 20px;
+   padding-right: 10px;
+   color: white;
+}
 
 #footer-t {
   background-color: #00122f;
