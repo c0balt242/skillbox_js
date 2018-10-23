@@ -146,6 +146,10 @@ a:visited {
   text-decoration: none;
 }
 
+#all-white {
+  color: white;
+}
+
 .news-time {
   position: absolute;
   top: 0;
@@ -160,8 +164,12 @@ a:visited {
   top: 0;
   left: 180px;
   padding-left: 15px;
-  background-image: url('img/icon-comments2.png');
+  background-image: url('img/icon-comments.png');
   background-repeat: no-repeat;
+}
+
+.all-new a {
+  text-decoration: none;
 }
 
 .all-new p {
@@ -173,7 +181,7 @@ a:visited {
   padding: 10px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 #column-left h2 {
@@ -210,7 +218,7 @@ a:visited {
 }
 
 .center-top-bot {
-  padding-bottom: 40px;
+  padding-bottom: 55px;
 }
 
 .center-mid {
@@ -272,13 +280,12 @@ a:visited {
 
 
 
-#column-right {
-  background-color: white;
+.column-right {
   width: 250px;
   float: right;
 }
 
-#column-right img {
+.column-right img {
   margin-bottom: 20px;
 }
 
@@ -288,17 +295,17 @@ a:visited {
 }
 
 .row-column-left {
-   background-image: url(img/car.jpg);
-   background-size: cover;
-   width: 60%;
-   float: left;
-   height: 410px;
+  background-image: url(img/car.jpg);
+  background-size: cover;
+  width: 60%;
+  float: left;
+  height: 410px;
 }
 
 .row-column-left-footer {
-   padding-left: 20px;
-   padding-right: 10px;
-   color: white;
+  padding-left: 20px;
+  padding-right: 10px;
+  color: white;
 }
 
 .row-column-left-footer p {
@@ -311,11 +318,11 @@ a:visited {
   opacity: 0.7;
 }
 
-
 .row-column-right {
-   padding-left: 20px;
-   padding-right: 10px;
-   color: white;
+  width: 40%;
+  float: left;
+  background: white;
+  height: 410px;
 }
 
 #footer-t {
