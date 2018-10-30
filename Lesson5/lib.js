@@ -8,10 +8,11 @@ var start = (function () {
     do {
       input = prompt('Enter number: ');
       count++;
-      alert(count);
+      console.log('осталось попыток: ' + count);
       if (count === 10) {
         return input = null
-      };
-    } while (input != null);
+      }
+    }
+    while (input != null);
   }
 })();
