@@ -3,7 +3,6 @@ var start = (function () {
   var random = Math.round(Math.random() * 10);
   var input = 0;
   var count = 10;
-<<<<<<< HEAD
 
   function check(input) {
     return !input || isNaN(input);
@@ -21,13 +20,10 @@ var start = (function () {
       return true;
     }
   }
-=======
->>>>>>> e6b6aa25a9b575edfe7074d7c513871c8d3eeed4
 
   return function () {
     var flag = true;
     do {
-<<<<<<< HEAD
       input = prompt('Угадайте число от 1 до 10: ');
       count--;
       console.log('осталось попыток: ' + count + ' (' + random + ')');
@@ -38,13 +34,6 @@ var start = (function () {
         alert('Это не число!');
       } else if (compare(input, random)) {
         break;
-=======
-      input = prompt('Enter number: ');
-      count--;
-      console.log('осталось попыток: ' + count);
-      if (count === 0) {
-        return input = null;
->>>>>>> e6b6aa25a9b575edfe7074d7c513871c8d3eeed4
       }
     } while (input != null);
   }
