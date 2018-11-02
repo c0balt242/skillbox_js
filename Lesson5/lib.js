@@ -22,7 +22,6 @@ var start = (function () {
   }
 
   return function () {
-    var flag = true;
     do {
       input = prompt('Угадайте число от 1 до 10: ');
       count--;
