@@ -28,7 +28,11 @@ var start = (function () {
   }
 
   return function () {
+<<<<<<< HEAD
     while (input != null) {
+=======
+    do {
+>>>>>>> a2b52e8f480f71a0a7721b2718cceb1c8d51e820
       input = prompt('Угадайте число от 1 до 10: ');
       if (input == null) {
         alert('Игра окончена.');
