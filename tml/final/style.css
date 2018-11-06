@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   min-width: 1000px;
-  font-family: Arial;
+  font-family: Arial, Helvetica, sans-serif;
   background-color: #f9f9f9;
 }
 
@@ -20,7 +20,8 @@ body {
   font-size: 16px;
 }
 
-.top-bar a {
+.top-bar a,
+a:visited {
   text-decoration: none;
   color: white;
 }
@@ -76,36 +77,37 @@ body {
   margin-right: 40px;
 }
 
-#menu {
+.menu {
   height: 70px;
   background-color: white;
   /* border: 1px solid black; */
 }
 
-#menu ul {
+.menu ul {
   font-size: 0;
   padding: 18px 0;
   list-style: none;
 }
 
-#menu li {
+.menu li {
   font-size: 16px;
   display: inline;
 }
 
-#menu li+li:before {
+.menu li+li:before {
   padding: 0 15px;
   content: "/";
   color: #91919f;
 }
 
-#menu li a:link,
+.menu li a,
+a:link,
 a:visited {
   color: black;
   text-decoration: none;
 }
 
-#menu li a:hover {
+.menu li a:hover {
   color: #91919f;
 }
 
@@ -132,16 +134,22 @@ a:visited {
   font-size: 14px;
 }
 
-#news-item-text {
+.news-item-bold {
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: -0.01em;
+}
+
+.news-item-text {
   margin-bottom: 20px;
 }
 
-#news-item-props {
+.news-item-props {
   font-size: 12px;
   position: relative;
 }
 
-#news-item-props a {
+.news-item-props a {
   color: #91919f;
   text-decoration: none;
 }
@@ -176,7 +184,7 @@ a:visited {
   color: #448ccb;
   border: 1px solid #448ccb;
   border-radius: 50px;
-  width: 177px;
+  width: 170px;
   text-align: center;
   padding: 10px;
   margin-left: auto;
@@ -184,7 +192,8 @@ a:visited {
   margin-bottom: 40px;
 }
 
-#column-left h2 {
+
+h2 {
   font-size: 20px;
   padding: 27px 0 27px 18px;
   margin: 0 0 34px;
@@ -268,7 +277,7 @@ a:visited {
   top: 0;
   left: 160px;
   padding-left: 15px;
-  background-image: url(img/icon-comments2.png);
+  background-image: url(img/icon-comments.png);
   background-repeat: no-repeat;
 }
 
@@ -277,8 +286,6 @@ a:visited {
   width: 200px;
   margin-left: 20px;
 }
-
-
 
 .column-right {
   width: 250px;
@@ -325,20 +332,61 @@ a:visited {
   height: 410px;
 }
 
-#footer-t {
+.footer-t {
   background-color: #00122f;
   color: #fff;
   height: 250px;
 }
 
-#footer a {
+footer a {
   text-decoration: none;
-  color: #fff;
+  color: white;
 }
 
-#footer-main {
+.footer-main {
   width: 960px;
   margin: 0 auto;
   padding-top: 40px;
   position: relative;
+}
+
+.footer-main a,
+a:visited {
+  color: white;
+}
+
+.footer-main-one {
+  float: left;
+  width: 15%;
+}
+
+.footer-main-two {
+  float: left;
+  width: 30%;
+}
+
+.footer-main-three {
+  float: left;
+}
+
+.footer-main-four {
+  float: right;
+}
+
+.footer-bot {
+  background-color: #00122f;
+  color: rgba(255, 255, 255, 0.4);
+  height: 50px;
+  border-top: 1px solid;
+}
+
+.footer-bot p {
+  margin: 0;
+}
+
+.footer-copyright {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 14px;
+  line-height: 50px;
 }
