@@ -1,6 +1,6 @@
 var start = (function () {
-  // debugger;
-  var random = Math.round(Math.random() * 10);
+
+  var random = Math.round(Math.random() * 1000);
   var input = 0;
   var count = 10;
 
@@ -9,27 +9,26 @@ var start = (function () {
   }
 
   function compare(input, random) {
-    if (input < random) {
+    if (random < input) {
       alert('Это число меньше. Осталось попыток: ' + count);
       return false;
-    } else if (input > random) {
+    } else if (random > input) {
       alert('Это число больше. Осталось попыток: ' + count);
       return false;
     } else {
-      alert('Вы угадали за ' + (10 - count) + ' попыток!');
+      alert('Вы угадали! Количество попыток: ' + (10 - count));
       return true;
     }
   }
 
   return function () {
     while (input != null) {
-      input = prompt('Угадайте число от 1 до 10: ');
+      input = prompt('Угадайте число от 1 до 1000: ');
       if (input == null) {
         alert('Игра окончена.');
         break;
       }
       count--;
-      console.log('осталось попыток: ' + count + ' (' + random + ')');
       if (count === 0) {
         alert('Попытки закончились');
         break;
