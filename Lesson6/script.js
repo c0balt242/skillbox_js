@@ -15,7 +15,7 @@ var UserList = function() {
 
   this.show = function() {
     for (var i = 0; i <= this.users.length; i++) {
-      return this.users[i].firstName + ' ' + this.users[i].lastName + ' ' + this.users[i].regDate;
+      document.write(this.users[i].firstName + ' ' + this.users[i].lastName + ' ' + this.users[i].regDate + '<br>');
     }
   };
 };
