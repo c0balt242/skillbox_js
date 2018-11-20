@@ -1,4 +1,4 @@
-// "use strict";
+"use strict";
 
 var User = function (firstName, lastName, regDate) {
   this.firstName = firstName;
@@ -6,15 +6,24 @@ var User = function (firstName, lastName, regDate) {
   this.regDate = regDate;
 };
 
-var date = new Date();
+var UserList = function(User) {
+  this.users = [];
+  
+  this.add = function() {
+    this.users.push(user);
+  }
+  
+  this.show = function() {
+    return this.users;
+  }
+}
 
-var users = [];
+var date = new Date();
+var list = new UserList();
 
 var user = new User('Anatoliy', 'Ivanov', date.toString());
-users.push(user);
-var user = new User('Vasya', 'Petrov', date.toString());
-users.push(user);
-var user = new User('Gena', 'Kakashkin', date.toString());
-users.push(user);
-console.log(user);
-console.log(users);
+list.add(user);
+var user = new User('Petya', 'Kakashkin', date.toString());
+list.add(user);
+console.log(list.show());
+
