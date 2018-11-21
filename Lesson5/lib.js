@@ -13,7 +13,6 @@ var start = (function () {
     // function check(input) {
     //   return !input || isNaN(input);
     // }
-
     var check = input => !input || isNaN(input);
 
     function compare(input, random) {
