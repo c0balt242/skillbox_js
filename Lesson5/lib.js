@@ -1,19 +1,20 @@
 var start = (function () {
 
+  var random = Math.round(Math.random() * 1000);
+  var input;
+
   return function () {
     var count = 10;
-    var random = Math.round(Math.random() * 1000);
-    var input;
+    
+    function isNull(input) {
+      return input === null;
+    }
+    // var isNull = input => input === null;
 
-    // function isNull(input) {
-    //   return input === null;
-    // }
-    var isNull = input => input === null;
-
-    // function check(input) {
-    //   return !input || isNaN(input);
-    // }
-    var check = input => !input || isNaN(input);
+    function check(input) {
+      return !input || isNaN(input);
+    }
+    // var check = input => !input || isNaN(input);
 
     function compare(input, random) {
       if (random < input) {
