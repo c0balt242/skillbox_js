@@ -39,7 +39,7 @@ var list = new UserList();
 function addUser() {
   var input = prompt("Enter first and last name: ");
   var str = input.split(" ", 2);
-  var user = new User(str[0], str[1], date.toDateString());
+  var user = new User(str[0], str[1], date.toLocaleString());
   list.add(user);
 }
 
