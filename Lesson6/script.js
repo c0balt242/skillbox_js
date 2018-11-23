@@ -28,13 +28,6 @@ function isNull(input) {
 
 var date = new Date();
 var list = new UserList();
-// var user = new User("Anatoliy", "Ivanov", date.toString());
-// list.add(user);
-// var user = new User("Vasya", "Grechushev", date.toString());
-// list.add(user);
-// var user = new User("Andrey", "Sagitov", date.toString());
-// list.add(user);
-
 
 function addUser() {
   var input = prompt("Enter first and last name: ");
